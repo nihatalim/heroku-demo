@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY ./deploy/herokudemo.jar ./herokudemo.jar
 
-ENTRYPOINT ["java", "-jar", "/app/herokudemo.jar"]
+ENTRYPOINT ["java", "-Dserver.port=$PORT", "-jar", "/app/herokudemo.jar"]
